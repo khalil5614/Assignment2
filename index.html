@@ -38,10 +38,10 @@
               tabindex="0"
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <li><a>Potato</a></li>
-              <li><a>Soup</a></li>
-              <li><a>Chicken</a></li>
-              <li><a>Beef</a></li>
+              <li><a onclick="loadMeals('potato')">Potato</a></li>
+              <li><a onclick="loadMeals('soup')">Soup</a></li>
+              <li><a onclick="loadMeals('chicken')">Chicken</a></li>
+              <li><a onclick="loadMeals('beef')">Beef</a></li>
             </ul>
           </div>
           <img src="/Resources/logo.png" alt="Logo" class="w-14" />
@@ -199,9 +199,9 @@
       </div>
       <!-- #endregion -->
     </header>
-    <main class="mx-10">
+    <main>
       <!-- #region result-->
-      <section>
+      <section class="w-10/12 mx-auto mb-10 mt-5">
         <div
           id="result-container"
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3"
@@ -210,86 +210,91 @@
 
       <!-- #endregion -->
       <!-- #region FAQ-->
-      <div class="join join-vertical w-full my-5">
-        <div class="collapse collapse-arrow join-item border-base-300 border">
-          <input type="radio" name="my-accordion-4" checked="checked" />
-          <div class="collapse-title text-xl font-medium">
-            How do I search for restaurants or dishes on Foodie?
+
+      <section class="w-1/2 mx-auto">
+        <h2 class="text-3xl text-center font-bold mt-15">FAQ Section</h2>
+        <div class="join join-vertical my-5">
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" checked="checked" />
+            <div class="collapse-title text-xl font-medium">
+              How do I search for restaurants or dishes on Foodie?
+            </div>
+            <div class="collapse-content">
+              <p>
+                You can use the search bar to type the name of a restaurant or a
+                dish. You can also use filters to search by cuisine, dietary
+                preferences, or delivery options.
+              </p>
+            </div>
           </div>
-          <div class="collapse-content">
-            <p>
-              You can use the search bar to type the name of a restaurant or a
-              dish. You can also use filters to search by cuisine, dietary
-              preferences, or delivery options.
-            </p>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              How do I place an order on Foodie?
+            </div>
+            <div class="collapse-content">
+              <p>
+                To place an order, choose a restaurant, select your items, add
+                them to your cart, and follow the checkout process to confirm
+                your order.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              What payment methods are accepted on Foodie?
+            </div>
+            <div class="collapse-content">
+              <p>
+                Foodie accepts all major credit/debit cards, digital wallets
+                (such as Google Pay and Apple Pay), and sometimes cash on
+                delivery, depending on your location.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              Does Foodie offer any loyalty programs or rewards?
+            </div>
+            <div class="collapse-content">
+              <p>
+                Yes! Foodie offers a rewards program where you can earn points
+                for every order. These points can be redeemed for discounts or
+                free items.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              How do I apply promo codes or discounts?
+            </div>
+            <div class="collapse-content">
+              <p>
+                You can apply promo codes at checkout. Simply enter the code in
+                the "Promo Code" section, and the discount will be applied to
+                your total.
+              </p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow join-item border-base-300 border">
+            <input type="radio" name="my-accordion-4" />
+            <div class="collapse-title text-xl font-medium">
+              How does Foodie ensure food safety during delivery?
+            </div>
+            <div class="collapse-content">
+              <p>
+                Foodie works with restaurants that follow strict food safety
+                guidelines. Delivery drivers are trained to handle food with
+                care, and no-contact delivery options are available.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="collapse collapse-arrow join-item border-base-300 border">
-          <input type="radio" name="my-accordion-4" />
-          <div class="collapse-title text-xl font-medium">
-            How do I place an order on Foodie?
-          </div>
-          <div class="collapse-content">
-            <p>
-              To place an order, choose a restaurant, select your items, add
-              them to your cart, and follow the checkout process to confirm your
-              order.
-            </p>
-          </div>
-        </div>
-        <div class="collapse collapse-arrow join-item border-base-300 border">
-          <input type="radio" name="my-accordion-4" />
-          <div class="collapse-title text-xl font-medium">
-            What payment methods are accepted on Foodie?
-          </div>
-          <div class="collapse-content">
-            <p>
-              Foodie accepts all major credit/debit cards, digital wallets (such
-              as Google Pay and Apple Pay), and sometimes cash on delivery,
-              depending on your location.
-            </p>
-          </div>
-        </div>
-        <div class="collapse collapse-arrow join-item border-base-300 border">
-          <input type="radio" name="my-accordion-4" />
-          <div class="collapse-title text-xl font-medium">
-            Does Foodie offer any loyalty programs or rewards?
-          </div>
-          <div class="collapse-content">
-            <p>
-              Yes! Foodie offers a rewards program where you can earn points for
-              every order. These points can be redeemed for discounts or free
-              items.
-            </p>
-          </div>
-        </div>
-        <div class="collapse collapse-arrow join-item border-base-300 border">
-          <input type="radio" name="my-accordion-4" />
-          <div class="collapse-title text-xl font-medium">
-            How do I apply promo codes or discounts?
-          </div>
-          <div class="collapse-content">
-            <p>
-              You can apply promo codes at checkout. Simply enter the code in
-              the "Promo Code" section, and the discount will be applied to your
-              total.
-            </p>
-          </div>
-        </div>
-        <div class="collapse collapse-arrow join-item border-base-300 border">
-          <input type="radio" name="my-accordion-4" />
-          <div class="collapse-title text-xl font-medium">
-            How does Foodie ensure food safety during delivery?
-          </div>
-          <div class="collapse-content">
-            <p>
-              Foodie works with restaurants that follow strict food safety
-              guidelines. Delivery drivers are trained to handle food with care,
-              and no-contact delivery options are available.
-            </p>
-          </div>
-        </div>
-      </div>
+      </section>
+
       <!-- #endregion -->
     </main>
     <footer>

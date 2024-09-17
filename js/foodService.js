@@ -29,10 +29,7 @@ const showMeals = (meals) => {
         </figure>
         <div class="card-body">
           <h2 class="card-title line-clamp-1">${meal.strMeal}</h2>
-          <p title="${meal.strInstructions}" >${meal.strInstructions.slice(
-      0,
-      100
-    )}...</p>
+          <p class='text-ellipsis line-clamp-3'>${meal.strInstructions}</p>
           <div class="card-actions justify-center mt-5">
             <button class="btn btn-secondary">Order Now</button>
           </div>
@@ -41,3 +38,5 @@ const showMeals = (meals) => {
     resultContainer.appendChild(card);
   });
 };
+
+loadMeals("potato");
