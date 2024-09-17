@@ -39,4 +39,8 @@ const showMeals = (meals) => {
   });
 };
 
-loadMeals("potato");
+window.onload = function () {
+  let potatooMenu = document.getElementById("potato-menu");
+  potatooMenu.click();
+  potatooMenu.focus();
+};
